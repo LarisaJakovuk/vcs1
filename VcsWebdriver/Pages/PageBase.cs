@@ -15,7 +15,7 @@ namespace VcsWebdriver.Pages
 
         public void CloseBrowser()
         {
-            Driver.Quit();
+         Driver.Quit();
         }
 
         public WebDriverWait GetWait(int seconds = 5)
