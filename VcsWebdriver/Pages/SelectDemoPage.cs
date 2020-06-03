@@ -40,10 +40,16 @@ namespace VcsWebdriver.Pages
         public SelectDemoPage SelectMultiValue(List<string> selectMulti)
         {
             {
+
                 foreach (string select in selectMulti)
                 {
-                    MultiSelectList.SelectByValue(select);
+                    MultiSelectList.SelectByValue(select); //("Florida,New Jersey,Texas")
                 }
+                //IList<IWebElement> allSellcetedOptions = MultiSelectList.AllSelectedOptions;
+                //foreach (IWebElement select in allSellcetedOptions)
+                //{
+                //   select.Click(); //("Florida,New Jersey,Texas")
+                //}
             }
             return this;
         }
@@ -62,5 +68,6 @@ namespace VcsWebdriver.Pages
             Assert.AreEqual($"Options selected are : {expectedResult}", AllSelectedResult.Text);
             return this;
         }
+        
     }
 }

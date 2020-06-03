@@ -50,7 +50,7 @@ namespace VcsWebdriver.Tests
             List<string> selectOptions = cityList.Split(',').ToList();
             _demoPage.DeselectAll().SelectMultiValue(selectOptions).ButtonClick().AssertTextAbove(cityList);
         }
-
+        
         [OneTimeTearDown]
         public static void CloseBrowser()
         {
